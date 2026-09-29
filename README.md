@@ -1,42 +1,39 @@
 <div align="center">
 
-# 🚀 VangardCLI
+# 🔮 VangardCLI
 
-**A Complete Python Reimplementation Based on Real Claude Code Source**
+**An AI coding agent for your terminal, written in Python.**
 
-*From TypeScript Source → Rebuilt in Python with ❤️*
+*"The Light answers those who study it. So does the codebase."*
+<br>— from the field notes of a Warlock
 
 ***
 
 [![GitHub stars](https://img.shields.io/github/stars/dea6cat/vangardCLI?style=for-the-badge&logo=github&color=yellow)](https://github.com/dea6cat/vangardCLI/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/dea6cat/vangardCLI?style=for-the-badge&logo=github&color=blue)](https://github.com/dea6cat/vangardCLI/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
-
-
-**🔥 Active Development • New Features Weekly 🔥**
 
 </div>
 
 ***
 
-## 🎯 Why VangardCLI?
+## 🌌 What This Is
 
-**VangardCLI** is a **production-oriented Python rebuild of Claude Code**, ported from the **real TypeScript architecture** and shipped as a **working CLI agent**, not just a source dump.
+I have spent a long time in the terminal, Guardian. Most tools there answer one question and fall silent. VangardCLI does more: it reads your files, runs your commands, fetches what it needs from the web, and keeps working until the task is done.
 
-- **Real Agent Runtime** — tool-calling loop, streaming REPL, session history, and multi-turn execution
-- **High-Fidelity Port** — keeps the original Claude Code architecture while adapting it to idiomatic Python
-- **Built to Hack On** — readable Python codebase, rich tests, and markdown-driven skill extensibility
+It is a Python rebuild of the Claude Code architecture, and it ships as a working CLI agent:
 
-**A real Claude Code-style terminal workflow in Python: stream replies, call tools, fetch context, and extend behavior with skills.**
-
-**🚀 Try it now! Fork it, modify it, make it yours! Pull requests welcome!**
+- **A real agent loop.** It calls tools, streams its replies, remembers the session, and works over many turns.
+- **A faithful port.** It keeps the proven architecture, rewritten in idiomatic Python.
+- **Built to study and extend.** The code is readable and tested, and you add new skills by writing Markdown.
 
 ***
 
 ## ✨ Features
 
-### Streaming Agent Experience
+### Streaming Agent
+
+*Watch the answer take shape as it forms, like a Rift filling with Light.*
 
 ```text
 >>> /stream on
@@ -47,11 +44,13 @@
 >>> /render-last
 ```
 
-- True API streaming for direct replies plus richer streaming during tool-driven agent loops
-- Built-in `/stream` toggle for live output and `/render-last` for clean Markdown re-rendering on demand
-- Designed for real terminal demos: streaming text, visible tool activity, and stable fallback behavior
+- Direct replies stream straight from the API, and tool-driven agent loops stream too
+- `/stream` toggles live output; `/render-last` re-renders the last reply as clean Markdown
+- You can see each tool as it runs, and if streaming fails it falls back to the regular agent loop
 
-### Programmable Skill Runtime
+### Skills
+
+*Every Warlock keeps a grimoire. Here yours is a folder of Markdown files.*
 
 ```md
 ---
@@ -66,10 +65,12 @@ arguments: [path]
 Explain the code in $path. Start with an analogy, then draw a diagram.
 ```
 
-- Markdown-based `SKILL.md` slash commands
-- Supports project skills, user skills, named arguments, and tool limits
+- Each skill is a `SKILL.md` file and becomes a slash command
+- Skills can live in the project or in your user folder, take named arguments, and limit which tools they may use
 
-### Multi-Provider Support
+### Multiple Providers
+
+*One Light, many sources.*
 
 ```python
 providers = ["Anthropic Claude", "OpenAI GPT", "Zhipu GLM"]  # + easy to extend
@@ -79,7 +80,7 @@ providers = ["Anthropic Claude", "OpenAI GPT", "Zhipu GLM"]  # + easy to extend
 
 ```text
 >>> Hello!
-Assistant: Hi! I'm VangardCLI, a Python reimplementation...
+Assistant: Eyes up. I'm VangardCLI...
 
 >>> /help         # Show commands
 >>> /             # Show all commands & skills
@@ -89,7 +90,7 @@ Assistant: Hi! I'm VangardCLI, a Python reimplementation...
 >>> /explain-code qsort.py   # Run a skill
 ```
 
-### Complete CLI
+### CLI
 
 ```bash
 vangard              # Start REPL
@@ -101,6 +102,8 @@ vangard config       # View settings
 ***
 
 ## 📊 Status
+
+*Where things stand today.*
 
 | Component     | Status     | Count     |
 | ------------- | ---------- | --------- |
@@ -122,7 +125,7 @@ vangard config       # View settings
 | Context Building | 🟡 | Initial prompt injection for workspace, git, and CLAUDE.md; deeper project understanding still needed |
 | Permission System | 🟡 | Framework exists, needs integration |
 
-### Tool System (30+ Tools Implemented)
+### Tools (30+)
 
 | Category | Tools | Status |
 |----------|-------|--------|
@@ -136,10 +139,10 @@ vangard config       # View settings
 | MCP | MCP tools and resources | ✅ Complete |
 | Others | LSP, Worktree, Skill, ToolSearch | ✅ Complete |
 
-### Roadmap Progress
+### Roadmap
 
 - ✅ **Phase 0**: Installable, runnable CLI
-- ✅ **Phase 1**: Core Claude Code MVP experience
+- ✅ **Phase 1**: Core agent MVP experience
 - ✅ **Phase 2**: Real tool calling loop
 - 🟡 **Phase 3**: Context, permissions, recovery (in progress)
 - ⏳ **Phase 4**: MCP, plugins, extensibility
@@ -147,13 +150,17 @@ vangard config       # View settings
 
 **See [FEATURE_LIST.md](FEATURE_LIST.md) for detailed feature status and PR guidelines.**
 
+***
+
 ## 🚀 Quick Start
+
+*Every journey begins in the Tower.*
 
 ### Install
 
 ```bash
 git clone https://github.com/dea6cat/vangardCLI.git
-cd VangardCLI
+cd vangardCLI
 
 # Create venv (uv recommended)
 uv venv --python 3.11
@@ -179,7 +186,7 @@ This flow will:
 4. optionally save a default model
 5. set the selected provider as default
 
-The configuration file is saved in in `~/.vangard/config.json`. Example structure:
+The configuration is saved to `~/.vangard/config.json`. Example structure:
 
 ```json
 {
@@ -211,7 +218,7 @@ python -m src.cli          # Start REPL
 python -m src.cli --help   # Show help
 ```
 
-**That's it!** Start chatting with AI in 3 steps.
+That's all it takes: clone, configure, run.
 
 ***
 
@@ -229,13 +236,13 @@ python -m src.cli --help   # Show help
 | `/clear`     | Clear history         |
 | `/exit`      | Exit REPL             |
 
-### Skills (Slash Commands)
+### Writing Skills
 
-Skills are markdown-based slash commands stored under `.vangard/skills`. Each skill lives in its own directory and must be named `SKILL.md`.
+*A skill is a spell you write once and cast again and again.*
+
+Skills are slash commands written in Markdown and stored under `.vangard/skills`. Each skill lives in its own directory, and its file must be named `SKILL.md`.
 
 **1) Create a project skill**
-
-Create:
 
 ```text
 <project-root>/.vangard/skills/<skill-name>/SKILL.md
@@ -277,37 +284,12 @@ Example:
 - Arguments: use `$ARGUMENTS`, `$0`, `$1`, or named args like `$path` (from `arguments`).
 - Placeholder syntax: use `$path`, not `${path}`.
 
-
-
-***
-
-## 🎓 Why VangardCLI?
-
-### Based on Real Source Code
-
-- **Not a clone** — Ported from actual TypeScript implementation
-- **Architectural fidelity** — Maintains proven design patterns
-- **Improvements** — Better error handling, more tests, cleaner code
-
-### Python Native
-
-- **Type hints** — Full type annotations
-- **Modern Python** — Uses 3.10+ features
-- **Idiomatic** — Clean, Pythonic code
-
-### User Focused
-
-- **3-step setup** — Clone, configure, run
-- **Interactive config** — `vangard login` guides you
-- **Rich REPL** — Tab completion, syntax highlighting
-- **Session persistence** — Never lose your work
-
 ***
 
 ## 📦 Project Structure
 
 ```text
-VangardCLI/
+vangardCLI/
 ├── src/
 │   ├── cli.py           # CLI entry
 │   ├── providers/       # LLM providers
@@ -322,10 +304,9 @@ VangardCLI/
 
 ***
 
-
 ## 🤝 Contributing
 
-**We welcome contributions!**
+*Fireteams welcome.*
 
 ```bash
 # Quick dev setup
@@ -339,56 +320,46 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📖 Documentation
 
-- **[SETUP_GUIDE.md](docs/guide/SETUP_GUIDE.md)** — Detailed installation
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Development guide
-- **[TESTING.md](docs/guide/TESTING.md)** — Testing guide
-- **[CHANGELOG.md](CHANGELOG.md)** — Version history
-
-***
-
-## ⚡ Performance
-
-- **Startup**: < 1 second
-- **Memory**: < 50MB
-- **Response**: Turn-based assistant output with Rich markdown rendering
+- **[SETUP_GUIDE.md](docs/guide/SETUP_GUIDE.md)**: detailed installation
+- **[CONTRIBUTING.md](CONTRIBUTING.md)**: development guide
+- **[TESTING.md](docs/guide/TESTING.md)**: testing guide
+- **[CHANGELOG.md](CHANGELOG.md)**: version history
 
 ***
 
 ## 🔒 Security
 
-✅ **Basic Local Safety Practices**
+*Even a Warlock locks the vault.*
 
-- No sensitive data in Git
-- API keys obfuscated in config
-- `.env` files ignored
-- Safe for local development workflows
+- Keep sensitive data out of Git
+- API keys are stored in the config encoded, not encrypted
+- `.env` files are git-ignored
+- Intended for local development
 
 ***
 
 ## 📄 License
 
-MIT License — See [LICENSE](LICENSE)
+MIT License. See [LICENSE](LICENSE).
 
 ***
 
 ## 🙏 Acknowledgments
 
-- Based on Claude Code TypeScript source
-- Independent educational project
-- Not affiliated with Anthropic
+- Based on the Claude Code architecture
+- An independent educational project
+- Not affiliated with Anthropic or Bungie
 
 ***
 
 <div align="center">
 
-### 🌟 Show Your Support
+*"We study, we build, we share what we learn."*
 
-If you find this useful, please **star** ⭐ the repo!
+If this tool helped you, a ⭐ on the repo helps it reach other Guardians.
 
-**Made with ❤️ by dea6cat**
+**Written by dea6cat**
 
 [⬆ Back to Top](#-vangardcli)
 
 </div>
-
-***
