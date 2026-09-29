@@ -1,4 +1,4 @@
-"""Conversation management for Clawd Codex."""
+"""Conversation management for VangardCLI."""
 
 from __future__ import annotations
 

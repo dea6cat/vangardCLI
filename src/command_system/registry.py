@@ -1,5 +1,5 @@
 """
-Command registry for Clawd Code.
+Command registry for VangardCLI.
 
 Manages registration and lookup of commands.
 """
