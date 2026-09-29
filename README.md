@@ -5,7 +5,7 @@
 **An AI coding agent for your terminal, written in Python.**
 
 *"The Light answers those who study it. So does the codebase."*
-<br>— from the field notes of a Warlock
+<br>— from the field notes
 
 ***
 
@@ -50,7 +50,7 @@ It is a Python rebuild of the Claude Code architecture, and it ships as a workin
 
 ### Skills
 
-*Every Warlock keeps a grimoire. Here yours is a folder of Markdown files.*
+*Every scholar keeps a grimoire. Here yours is a folder of Markdown files.*
 
 ```md
 ---
@@ -329,7 +329,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 🔒 Security
 
-*Even a Warlock locks the vault.*
+*Knowledge is power. Guard both.*
 
 - Keep sensitive data out of Git
 - API keys are stored in the config encoded, not encrypted
